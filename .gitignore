@@ -1,0 +1,49 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Next.js
+.next/
+out/
+build/
+
+# Python (AI Services)
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env.local
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+*.h5
+*.hdf5
+*.keras
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+serviceAccountKey.json
+
+# FAISS and Pickle Files
+*.faiss
+*.pkl
+
+# macOS
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
