@@ -5,3 +5,4 @@ flask-cors
 faiss-cpu
 pytesseract
 Pillow
+gunicorn
