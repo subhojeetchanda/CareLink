@@ -18,7 +18,6 @@ env/
 .venv/
 pip-log.txt
 pip-delete-this-directory.txt
-*.h5
 *.hdf5
 *.keras
 
