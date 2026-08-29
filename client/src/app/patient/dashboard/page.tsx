@@ -113,7 +113,8 @@ export default function PatientDashboard() {
       if (user) {
         try {
           const token = await user.getIdToken();
-          socket = io("http://localhost:5001", {
+          const backendUrl = process.env.NEXT_PUBLIC_API_URL?.replace('/api', '') || "http://localhost:5001";
+          socket = io(backendUrl, {
             auth: { token }
           });
           socket.on("connect", () => {

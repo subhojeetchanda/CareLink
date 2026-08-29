@@ -85,7 +85,8 @@ export default function DoctorDashboard() {
       if (user) {
         try {
           const token = await user.getIdToken();
-          socket = io("http://localhost:5001", {
+          const backendUrl = process.env.NEXT_PUBLIC_API_URL?.replace('/api', '') || "http://localhost:5001";
+          socket = io(backendUrl, {
             auth: { token }
           });
           
@@ -437,7 +438,7 @@ export default function DoctorDashboard() {
                       {/* Image Container */}
                       <div className="relative w-full sm:w-72 flex-shrink-0 group overflow-hidden rounded-xl bg-slate-200 dark:bg-black border border-slate-300 dark:border-white/10">
                         <img 
-                          src={`http://localhost:5001${img.imageUrl}`} 
+                          src={`${process.env.NEXT_PUBLIC_API_URL?.replace('/api', '') || 'http://localhost:5001'}${img.imageUrl}`} 
                           alt="XRay" 
                           className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105 opacity-90 dark:opacity-80 group-hover:opacity-100"
                         />
